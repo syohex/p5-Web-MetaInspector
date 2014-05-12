@@ -3,9 +3,14 @@ use 5.008005;
 use strict;
 use warnings;
 
+use Web::MetaInspector::Scraper;
+
 our $VERSION = "0.01";
 
-
+sub new {
+    my ($class, $url) = @_;
+    return Web::MetaInspector::Scraper->new($url)->scrape;
+}
 
 1;
 __END__
@@ -36,4 +41,3 @@ it under the same terms as Perl itself.
 Syohei YOSHIDA E<lt>syohex@gmail.comE<gt>
 
 =cut
-
