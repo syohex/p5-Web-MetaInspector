@@ -1,4 +1,4 @@
 name = "Web-MetaInspector"
-# badges = ["travis"]
+badges = ["travis"]
 authority="cpan:SYOHEX"
 
