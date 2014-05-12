@@ -19,7 +19,7 @@ __END__
 
 =head1 NAME
 
-Web::MetaInspector - Inspector URI
+Web::MetaInspector - URI Inspection
 
 =head1 SYNOPSIS
 
