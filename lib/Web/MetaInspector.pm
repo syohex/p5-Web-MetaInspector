@@ -19,15 +19,89 @@ __END__
 
 =head1 NAME
 
-Web::MetaInspector - It's new $module
+Web::MetaInspector - Inspector URI
 
 =head1 SYNOPSIS
 
     use Web::MetaInspector;
 
+    my $res = Web::MetaInspector->new('http://example.com');
+    print $res->title;
+    print $res->author;
+    print $_ for @{$res->keywords};
+
 =head1 DESCRIPTION
 
-Web::MetaInspector is ...
+Web::MetaInspector is Perl port of Ruby's metainspector.
+You can get easily title, links, images, charset, keywords, author, feed URLs
+from url given.
+
+=head1 INTERFACE
+
+=head2 new($url)
+
+Get some useful information from C<$url> and return a C<Web::MetaInspector::Response>
+instance. C<Web::MetaInspector::Response> has following accessors
+
+=over
+
+=item uri
+
+URI of the page
+
+=item scheme
+
+Scheme of the page
+
+=item host
+
+Hostname of the page
+
+=item root
+
+Root url
+
+=item title
+
+Title of the page
+
+=item language
+
+Language of the page
+
+=item author
+
+Author of the pages
+
+=item description
+
+Description of the page
+
+=item generator
+
+Generator of the page
+
+=item feed
+
+Feed URLs of the page
+
+=item charset
+
+Charset of the page
+
+=item links
+
+Links which are linked in the page
+
+=item images
+
+Images which are linked in the page
+
+=item keyword
+
+Keywords of the page
+
+=back
 
 =head1 LICENSE
 
